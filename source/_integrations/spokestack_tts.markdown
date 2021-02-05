@@ -11,7 +11,9 @@ ha_codeowners:
 ha_domain: spokestack_tts
 ---
 
-[Spokestack](https://www.spokestack.io/) offers open-source libraries for adding a voice interface to _anything_. `spokestack_tts` is a text-to-speech platform that uses our Python [library](https://github.com/spokestack/spokestack-python) to read text with natural sounding custom voices. Usage of TTS with the default voice is free, but the API requires authentication. If you already have an account, [log in](https://www.spokestack.io/login), otherwise you will need to [create](https://www.spokestack.io/create) one. The credentials can be found in your [account settings](https://www.spokestack.io/account/settings).
+[Spokestack](https://www.spokestack.io/) offers open-source libraries for adding a voice interface to _anything_. `spokestack_tts` is a text-to-speech platform to read text with natural-sounding custom voices. Usage of TTS with the default voice is free, but the API requires authentication.
+
+If you already have an account, [log in](https://www.spokestack.io/login), otherwise you will need to [create](https://www.spokestack.io/create) one. The credentials can be found in your [account settings](https://www.spokestack.io/account/settings).
 
 ## Configuration
 
@@ -21,8 +23,8 @@ To get started, add the following lines to your `configuration.yaml`:
 # Example configuration.yaml entry
 tts:
   - platform: spokestack_tts
-    key_id: YOUR_API_KEY
-    key_secret: YOUR_API_SECRET
+    key_id: "YOUR_API_KEY"
+    key_secret: "YOUR_API_SECRET"
 ```
 
 {% configuration %}
@@ -65,10 +67,9 @@ A full configuration sample including optional variables:
 # Example configuration.yaml entry
 tts:
   - platform: spokestack_tts
-    key_id: YOUR_API_KEY
-    key_secret: YOUR_API_SECRET
-    language: en-US
-    voice: demo-male
+    key_id: "YOUR_API_KEY"
+    key_secret: "YOUR_API_SECRET"
+    language: "en-US"
+    voice: "demo-male"
     mode: text
-    
 ```
