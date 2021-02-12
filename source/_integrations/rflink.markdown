@@ -63,6 +63,11 @@ reconnect_interval:
   required: false
   default: 10
   type: integer
+tcp_keepalive_idle_timer:
+  description: Time in seconds to wait since last data packet was seen before a TCP KEEPALIVE is sent. Value of 0 will disable this feature.
+  required: false
+  default: 3600
+  type: integer 
 {% endconfiguration %}
 
 ### Full example
@@ -106,6 +111,7 @@ When re-flashing the Arduino MEGA, disconnect the ESP8266 to avoid programming d
 rflink:
   host: 192.168.0.10
   port: 1234
+  tcp_keepalive_idle_timer: 600
 ```
 
 ### Adding devices Automatically
