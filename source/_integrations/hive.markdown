@@ -73,8 +73,9 @@ script:
   boost_heating:
     sequence:
       - service: hive.boost_heating
-        data:
+        target:
           entity_id: "climate.heating"
+        data:
           time_period: "01:30:00"
           temperature: "20.5"
 ```
@@ -97,8 +98,9 @@ script:
   boost_hot_water:
     sequence:
       - service: "hive.boost_hot_water"
-        data:
+        target:
           entity_id: "water_heater.hot_water"
+        data:
           time_period: "01:30:00"
           on_off: "on"
 ```
