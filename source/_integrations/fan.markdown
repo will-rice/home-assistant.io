@@ -44,6 +44,7 @@ automation:
     platform: time
     at: "07:15:00"
   action:
+<<<<<<< HEAD
     - service: fan.set_percentage
       data:
         entity_id: fan.kitchen
@@ -72,6 +73,13 @@ automation:
       data:
         entity_id: fan.kitchen
         preset_mode: auto
+=======
+    - service: fan.set_speed
+      target:
+        entity_id: fan.kitchen
+      data:
+        speed: low
+>>>>>>> Update some service calls to use target (#16592)
 ```
 
 ### Service `fan.set_direction`
@@ -92,8 +100,9 @@ automation:
     at: "07:15:00"
   action:
     - service: fan.set_direction
-      data:
+      target:
         entity_id: fan.kitchen
+      data:
         direction: forward
 ```
 
@@ -115,8 +124,9 @@ automation:
     at: "07:15:00"
   action:
     - service: fan.oscillate
-      data:
+      target:
         entity_id: fan.kitchen
+      data:
         oscillating: True
 ```
 
